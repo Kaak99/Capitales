@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Capitales</string>
+    <string name="whatIsText">Quelle est la capitale de :</string>
+    <string name="pays1Text">PAYS 1</string>
+    <string name="pays2Text">PAYS 2</string>
+    <string name="pays3Text">PAYS 3</string>
+    <string name="pays4Text">PAYS 4</string>
+    <string name="pays5Text">PAYS 5</string>
+    <string name="capText">Sa capitale est...</string>
+    <string name="scoreText">Bonnes réponses = </string>
+</resources>
