@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnPays1, btnPays2, btnPays3, btnPays4, btnPays5;
     EditText etCapit1, etCapit2, etCapit3, etCapit4, etCapit5;
     Button butStart, butCheck;
+    boolean controleStart=false, controleCheck=false;
 
     //final int COUNTRY_NUMBER = 20;//inutile et arisque: pre,dre tab-lentght
     final int QUESTION_NUMBER = 5;
@@ -114,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
                 for (int j = 0; j < indexAlreadyUsed.size(); j++) {
                     indexAlreadyUsed.set(j, null);
                 }
-
+                controleStart=true;
+                controleCheck=false;
             }//fin de l'action du onclick
         });
 
@@ -128,10 +130,11 @@ public class MainActivity extends AppCompatActivity {
         butCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 for (int i = 0; i < QUESTION_NUMBER; i++) {
 
                     userAnswer = etCapitale[i].getText().toString();
-                        if (!userAnswer.equalsIgnoreCase(tabCapitale[i])) {
+                    if (!userAnswer.equalsIgnoreCase(tabCapitale[i])) {
                         //change couleur texte ou fond, echec fond
                         //etCapitale[i].setBackgroundColor(R.color.colorPrimary);
                         //etCapitale[i].setBackgroundColor(Color.red(1));
@@ -143,12 +146,19 @@ public class MainActivity extends AppCompatActivity {
                     //Log.v(TAG, "" + tabPayCap[i][1]);
 
                 }
-                tvWhatis.setText("Votre score = " + score + " / 5");
-                score = 0;
+                if (controleStart & !controleCheck) {
+                    tvWhatis.setText("Votre score = " + score + " / 5");
+
+            }
+                score = 5;
+                controleStart=false;
+                controleCheck=true;
             } //fin des action si click CHECK
         });
 
-
+//desactiver inputText au demarrage? editText.setInputType(InputType.TYPE_NULL);
+        //rajouter un splashScreen, du son
+        //augmenter la bdd
 
 
     }  //fin du on create
