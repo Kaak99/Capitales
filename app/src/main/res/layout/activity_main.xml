@@ -11,7 +11,6 @@
         android:id="@+id/ivTitle"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="5dp"
         app:srcCompat="@drawable/capitale_titre4" />
 
 
@@ -21,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ivTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
         android:paddingHorizontal="5dp"
         android:paddingVertical="5dp"
         android:text="@string/whatIsText"
@@ -32,105 +30,105 @@
     <Button
         android:id="@+id/btnPays1"
         android:layout_width="170dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
+        android:layout_height="52dp"
         android:layout_below="@id/tvWhatis"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="10dp"
         android:text="@string/pays1Text" />
 
     <EditText
         android:id="@+id/etCapit1"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
         android:layout_below="@id/tvWhatis"
         android:layout_alignBaseline="@id/btnPays1"
+        android:layout_alignParentRight="true"
         android:hint="@string/capText"
+        android:inputType="text"
         android:maxLength="20"
-        android:maxLines="1"
-        android:inputType="text"/>
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/btnPays2"
         android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnPays1"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/btnPays1"
         android:text="@string/pays2Text" />
 
     <EditText
         android:id="@+id/etCapit2"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
         android:layout_alignBaseline="@id/btnPays2"
+        android:layout_alignParentRight="true"
         android:hint="@string/capText"
-        android:maxLines="1"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:maxLines="1" />
 
 
     <Button
         android:id="@+id/btnPays3"
         android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnPays2"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/btnPays2"
         android:text="@string/pays3Text" />
 
     <EditText
         android:id="@+id/etCapit3"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
         android:layout_alignBaseline="@id/btnPays3"
+        android:layout_alignParentRight="true"
         android:hint="@string/capText"
-        android:maxLines="1"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/btnPays4"
         android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnPays3"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/btnPays3"
         android:text="@string/pays4Text" />
 
     <EditText
         android:id="@+id/etCapit4"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
         android:layout_alignBaseline="@id/btnPays4"
+        android:layout_alignParentRight="true"
         android:hint="@string/capText"
-        android:maxLines="1"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/btnPays5"
         android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnPays4"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/btnPays4"
         android:text="@string/pays5Text" />
 
     <EditText
         android:id="@+id/etCapit5"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
         android:layout_alignBaseline="@id/btnPays5"
+        android:layout_alignParentRight="true"
         android:hint="@string/capText"
-        android:maxLines="1"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/butStart"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
         android:layout_below="@id/btnPays5"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
@@ -138,12 +136,12 @@
 
     <Button
         android:id="@+id/butCheck"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
         android:layout_below="@id/btnPays5"
-        android:layout_toRightOf="@id/butStart"
-        android:layout_marginRight="60dp"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/butStart"
         android:text="CHECK" />
 
 </RelativeLayout>

@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
     Button btnPays1, btnPays2, btnPays3, btnPays4, btnPays5;
     EditText etCapit1, etCapit2, etCapit3, etCapit4, etCapit5;
     Button butStart, butCheck;
-    boolean controleStart=false, controleCheck=false;
+    boolean controleStart = false, controleCheck = false;
 
     //final int COUNTRY_NUMBER = 20;//inutile et arisque: pre,dre tab-lentght
     final int QUESTION_NUMBER = 5;
-    int index=0, score=5; //(on met score au max, on decremente par erreur)
+    int index = 0, score = 5; //(on met score au max, on decremente par erreur)
     //index sera resultat tirage au sort du pays (5 fois)
     String pays, capitale, userAnswer;
-    String[] tabCapitale = {"","","","","",""};
+    String[] tabCapitale = {"", "", "", "", "", ""};
     //String[] userCapitale = {"","","","","",""};//tab des 5 cap données par user créé et init
     //inutile
 
@@ -45,8 +45,28 @@ public class MainActivity extends AppCompatActivity {
             {"Arménie", "Erevan"}, {"Thailande", "Bangkok"}, {"Inde", "Delhi"}, {"Soudan", "Khartoum"},
             {"Mali", "Bamako"}, {"Liban", "Beyrouth"}, {"Serbie", "Belgrade"}, {"Sénégal", "Dakar"},
             {"Brésil", "Brasilia"}, {"Colombie", "Bogota"}, {"Roumanie", "Bucarest"}, {"Syrie", "Damas"},
-            {"Pakistan", "Islamabad"}, {"Autriche", "Vienne"}, {"Ukraine", "Kiev"}, {"Rwanda", "Kigali"}
-    };  //20pays et 20 capitales
+            {"Pakistan", "Islamabad"}, {"Autriche", "Vienne"}, {"Ukraine", "Kiev"}, {"Rwanda", "Kigali"},
+            {"Pays-Bas", "Amsterdam"}, {"Jordanie", "Amman"}, {"Turquie", "Ankara"}, {"Madagascar", "Antananarivo"},
+            {"Slovaquie", "Batislava"}, {"République du Congo", "Brazzaville"}, {"Hongrie", "Budapest"}, {"Australie", "Canberra"},
+            {"Venezuela", "Caracas"}, {"Guinée", "Conakry"}, {"Guinée-Bissau", "Bissau"}, {"Danemark", "Copenhague"},
+            {"Bangladesh", "Dacca"}, {"Djibouti", "Djibouti"}, {"Tanzanie", "Dodoma"}, {"Qatar", "Doha"},
+            {"Pays-Sierra Leone", "Freetown"}, {"Botswana", "Gaborone"}, {"Guatemala", "Guatemala"}, {"Indonésie", "Jakarta"},
+            {"Afghanistan", "Kaboul"}, {"Ouganda", "Kampala"}, {"Népal", "Katmandou"}, {"Jamaique", "Kingston"},
+            {"Rép.Démocratique du Congo", "Kinshasa"}, {"Koweït", "Koweït"}, {"Gabon", "Libreville"}, {"Malawi", "Lilongwe"},
+            {"Pérou", "Lima"}, {"Portugal", "Lisbonne"}, {"Royaume-Uni", "Londres"}, {"Angola", "Luanda"},
+            {"Luxembourg", "Luxembourg"}, {"Espagne", "Madrid"}, {"Croatie", "Zagreb"}, {"Philippines", "Manille"},
+            {"Mozambique", "Maputo"}, {"Lesotho", "Maseru"}, {"Swaziland", "Mbabane"}, {"Mexique", "Mexico"},
+            {"Biélorussie", "Minsk"}, {"Monaco", "Monaco"}, {"Liberia", "Monrovia"}, {"Uruguay", "Montevideo"},
+            {"Comores", "Moroni"}, {"Russie", "Moscou"}, {"Kenya", "Nairobi"}, {"Bahamas", "Nassau"},
+            {"Niger", "Niamey"}, {"Mauritanie", "Nouakchott"}, {"Norvège", "Oslo"}, {"Canada", "Ottawa"},
+            {"Burkina Faso", "Ouagadougou"}, {"Suriname", "Paramaribo"}, {"République tchèque", "Prague"}, {"Italie", "Rome"},
+            {"Corée du Nord", "Pyongyang"}, {"Equateur", "Quito"}, {"Maroc", "Rabat"}, {"Palestine", "Ramallah "},
+            {"Islande", "Reykjavik"}, {"Lettonie", "Riga"}, {"Arabie saoudite", "Ryiad"}, {"Afrique du Sud", "Pretoria"},
+            {"Chili", "Santiago"}, {"Yémen", "Sanaa"}, {"Bosnie-Herzégovine", "Sarajevo"}, {"Singapour", "Singapour "},
+            {"Bulgarie", "Sofia"}, {"Suède", "Stockholm"}, {"Bhoutan", "Thimphou"}, {"Albanie", "Tirana"},
+            {"Japon", "Tokyo"}, {"Lybie", "Tripoli"}, {"Tunisie", "Tunis"}, {"Pologne", "Varsovie "},
+            {"Samoa", "Apia"}, {"Érythrée", "Asmara"}, {"Azerbaïdjan", "Bakou"}, {"République centrafricaine", "Bangui"}
+    };  //25*4= 100 pays et 100 capitales
 
     ArrayList<Integer> indexAlreadyUsed = new ArrayList<>();
 
@@ -115,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                 for (int j = 0; j < indexAlreadyUsed.size(); j++) {
                     indexAlreadyUsed.set(j, null);
                 }
-                controleStart=true;
-                controleCheck=false;
+                controleStart = true;
+                controleCheck = false;
             }//fin de l'action du onclick
         });
 
@@ -141,27 +161,34 @@ public class MainActivity extends AppCompatActivity {
                         etCapitale[i].setTextColor(0xFFF00F00);
                         etCapitale[i].setText(tabCapitale[i]);
                         score--;
+                    } else {
+                        etCapitale[i].setTextColor(0xFF000000);
+                        etCapitale[i].setText(tabCapitale[i]);
                     }
 
-                    //Log.v(TAG, "" + tabPayCap[i][1]);
-
                 }
-                if (controleStart & !controleCheck) {
-                    tvWhatis.setText("Votre score = " + score + " / 5");
+                //Log.v(TAG, "" + tabPayCap[i][1]);
+
+
+                if(controleStart &!controleCheck)
+
+            {
+                tvWhatis.setText("Votre score = " + score + " / 5");
 
             }
-                score = 5;
-                controleStart=false;
-                controleCheck=true;
-            } //fin des action si click CHECK
-        });
+
+            score =5;
+            controleStart=false;
+            controleCheck=true;
+        } //fin des action si click CHECK
+    });
 
 //desactiver inputText au demarrage? editText.setInputType(InputType.TYPE_NULL);
-        //rajouter un splashScreen, du son
-        //augmenter la bdd
+    //rajouter un splashScreen, du son
+    //augmenter la bdd
 
 
-    }  //fin du on create
+}  //fin du on create
 
 
 }  // fin du main
