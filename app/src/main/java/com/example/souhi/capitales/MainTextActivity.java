@@ -1,5 +1,6 @@
 package com.example.souhi.capitales;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.nfc.Tag;
 import android.nfc.TagLostException;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -26,7 +28,7 @@ public class MainTextActivity extends AppCompatActivity {
     TextView tvWhatis;
     Button btnPays1, btnPays2, btnPays3, btnPays4, btnPays5;
     EditText etCapit1, etCapit2, etCapit3, etCapit4, etCapit5;
-    Button butStart, butCheck;
+    Button butStart, butCheck, butBack;
     boolean controleStart = false, controleCheck = false;
 
     final int QUESTION_NUMBER = 5;
@@ -47,12 +49,12 @@ public class MainTextActivity extends AppCompatActivity {
             {"Brésil", "Brasilia"}, {"Colombie", "Bogota"}, {"Roumanie", "Bucarest"}, {"Syrie", "Damas"},
             {"Pakistan", "Islamabad"}, {"Autriche", "Vienne"}, {"Ukraine", "Kiev"}, {"Rwanda", "Kigali"},
             {"Pays-Bas", "Amsterdam"}, {"Jordanie", "Amman"}, {"Turquie", "Ankara"}, {"Madagascar", "Antananarivo"},
-            {"Slovaquie", "Batislava"}, {"République du Congo", "Brazzaville"}, {"Hongrie", "Budapest"}, {"Australie", "Canberra"},
+            {"Slovaquie", "Batislava"}, {"Républ. du Congo", "Brazzaville"}, {"Hongrie", "Budapest"}, {"Australie", "Canberra"},
             {"Venezuela", "Caracas"}, {"Guinée", "Conakry"}, {"Guinée-Bissau", "Bissau"}, {"Danemark", "Copenhague"},
             {"Bangladesh", "Dacca"}, {"Djibouti", "Djibouti"}, {"Tanzanie", "Dodoma"}, {"Qatar", "Doha"},
             {"Pays-Sierra Leone", "Freetown"}, {"Botswana", "Gaborone"}, {"Guatemala", "Guatemala"}, {"Indonésie", "Jakarta"},
             {"Afghanistan", "Kaboul"}, {"Ouganda", "Kampala"}, {"Népal", "Katmandou"}, {"Jamaique", "Kingston"},
-            {"Rép.Démocratique du Congo", "Kinshasa"}, {"Koweït", "Koweït"}, {"Gabon", "Libreville"}, {"Malawi", "Lilongwe"},
+            {"Rép.Démocrat.du Congo", "Kinshasa"}, {"Koweït", "Koweït"}, {"Gabon", "Libreville"}, {"Malawi", "Lilongwe"},
             {"Pérou", "Lima"}, {"Portugal", "Lisbonne"}, {"Royaume-Uni", "Londres"}, {"Angola", "Luanda"},
             {"Luxembourg", "Luxembourg"}, {"Espagne", "Madrid"}, {"Croatie", "Zagreb"}, {"Philippines", "Manille"},
             {"Mozambique", "Maputo"}, {"Lesotho", "Maseru"}, {"Swaziland", "Mbabane"}, {"Mexique", "Mexico"},
@@ -61,11 +63,11 @@ public class MainTextActivity extends AppCompatActivity {
             {"Niger", "Niamey"}, {"Mauritanie", "Nouakchott"}, {"Norvège", "Oslo"}, {"Canada", "Ottawa"},
             {"Burkina Faso", "Ouagadougou"}, {"Suriname", "Paramaribo"}, {"République tchèque", "Prague"}, {"Italie", "Rome"},
             {"Corée du Nord", "Pyongyang"}, {"Equateur", "Quito"}, {"Maroc", "Rabat"}, {"Palestine", "Ramallah "},
-            {"Islande", "Reykjavik"}, {"Lettonie", "Riga"}, {"Arabie saoudite", "Ryiad"}, {"Afrique du Sud", "Pretoria"},
+            {"Islande", "Reykjavik"}, {"Lettonie", "Riga"}, {"Arabie Saoudite", "Ryiad"}, {"Afrique du Sud", "Pretoria"},
             {"Chili", "Santiago"}, {"Yémen", "Sanaa"}, {"Bosnie-Herzégovine", "Sarajevo"}, {"Singapour", "Singapour "},
             {"Bulgarie", "Sofia"}, {"Suède", "Stockholm"}, {"Bhoutan", "Thimphou"}, {"Albanie", "Tirana"},
             {"Japon", "Tokyo"}, {"Lybie", "Tripoli"}, {"Tunisie", "Tunis"}, {"Pologne", "Varsovie "},
-            {"Samoa", "Apia"}, {"Érythrée", "Asmara"}, {"Azerbaïdjan", "Bakou"}, {"République centrafricaine", "Bangui"}
+            {"Samoa", "Apia"}, {"Érythrée", "Asmara"}, {"Azerbaïdjan", "Bakou"}, {"Républ. centrafricaine", "Bangui"}
     };  //25*4= 100 pays et 100 capitales
 
     ArrayList<Integer> indexAlreadyUsed = new ArrayList<>();
@@ -75,7 +77,7 @@ public class MainTextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_text);
-
+        Toast.makeText(getApplicationContext(),"marche?", Toast.LENGTH_SHORT);
 
 //initialisation View by ID
         tvWhatis = findViewById(R.id.tvWhatis);
@@ -184,6 +186,17 @@ public class MainTextActivity extends AppCompatActivity {
             } //fin des action si click CHECK
         });
 
+
+        butBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"marche?", Toast.LENGTH_SHORT);
+//                Intent intent = new Intent(MainTextActivity.this, ChooseActivity.class);
+//                startActivity(intent);
+//                finish();
+            }
+        });
+//
 //desactiver inputText au demarrage? editText.setInputType(InputType.TYPE_NULL);
         //rajouter un splashScreen, du son
         //augmenter la bdd

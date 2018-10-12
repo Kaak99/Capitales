@@ -19,7 +19,7 @@ public class MainClicActivity extends AppCompatActivity {
         clicMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainClicActivity.this, ChooseActivity.class);
+                Intent i = new Intent(getApplicationContext(), ChooseActivity.class);
                 startActivity(i);
                 finish();
             }

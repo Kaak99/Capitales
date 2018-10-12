@@ -12,5 +12,8 @@
     <string name="modClic">Mode CLIC</string>
     <string name="tvExplain">Le jeu \"CAPITALES\" est un jeu dans lequel on doit trouver le nom de la capitale d\'un pays donné.</string>
     <string name="tvChoose">Choisissez de cliquer sur le bon nom parmi plusieurs, ou de taper les noms au clavier (plus difficile).</string>
+    <string name="check">CHECK</string>
+    <string name="back">BACK</string>
+    <string name="start">START</string>
 
 </resources>
