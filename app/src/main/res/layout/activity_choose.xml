@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearChoose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearChoose1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/chooseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/capitale_titre4"
+            android:layout_margin="15dp"
+            android:text="Button"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvExplain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tvExplain"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvChoose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tvChoose"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearChoose2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="3">
+
+
+        <Button
+            android:id="@+id/btnClic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/modClic" />
+
+
+        <Button
+            android:id="@+id/btnText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/modText"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

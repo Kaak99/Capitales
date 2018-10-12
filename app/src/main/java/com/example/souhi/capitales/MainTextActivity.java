@@ -1,17 +1,3 @@
-//package com.example.souhi.capitales;
-//
-//import android.support.v7.app.AppCompatActivity;
-//import android.os.Bundle;
-//
-//public class HomeActivity extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_home);
-//    }
-//}
-
 package com.example.souhi.capitales;
 
 import android.graphics.Color;
@@ -28,8 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Random;
 
+public class MainTextActivity extends AppCompatActivity {
 
-public class HomeActivity extends AppCompatActivity {
 
 
     //initialisation
@@ -88,8 +74,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
+        setContentView(R.layout.activity_main_text);
 
 
 //initialisation View by ID
@@ -169,7 +154,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 for (int i = 0; i < QUESTION_NUMBER; i++) {
 
-                    userAnswer = etCapitale[i].getText().toString();
+                    userAnswer = etCapitale[i].getText().toString().trim();
                     if (!userAnswer.equalsIgnoreCase(tabCapitale[i])) {
                         //change couleur texte ou fond, echec fond
                         //etCapitale[i].setBackgroundColor(R.color.colorPrimary);
@@ -194,7 +179,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
 
                 score = 5;
-                controleStart = false;
+                controleStart = !controleStart;
                 controleCheck = true;
             } //fin des action si click CHECK
         });

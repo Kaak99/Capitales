@@ -8,4 +8,9 @@
     <string name="pays5Text">PAYS 5</string>
     <string name="capText">Sa capitale est...</string>
     <string name="scoreText">Bonnes réponses = </string>
+    <string name="modText">Mode TEXTE</string>
+    <string name="modClic">Mode CLIC</string>
+    <string name="tvExplain">Le jeu \"CAPITALES\" est un jeu dans lequel on doit trouver le nom de la capitale d\'un pays donné.</string>
+    <string name="tvChoose">Choisissez de cliquer sur le bon nom parmi plusieurs, ou de taper les noms au clavier (plus difficile).</string>
+
 </resources>
